@@ -1,163 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>As Cinzas da Europa</title>
-    
+    <title>Meu blog tech - Projeto IFA</title>
     <style>
-        /* Importando as fontes do Google Fonts: Roboto para os textos e Cinzel para os títulos */
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght=500;700&family=Roboto:wght=300;400;700&display=swap');
-
-        /* Variáveis de Cores e Fontes */
-        :root {
-            --cor-fundo: #121214;       /* Cinza escuro quase preto */
-            --cor-fundo-cartao: #1a1a1e;/* Cinza um pouco mais claro */
-            --cor-principal: #e1e1e6;   /* Branco fosco para os textos principais */
-            --cor-destaque: #e53e3e;    /* Vermelho fosco para detalhes importantes */
-            --cor-subtitulo: #a0aec0;   /* Cinza claro para subtítulos */
-            
-            --fonte-titulos: 'Cinzel', serif;
-            --fonte-textos: 'Roboto', sans-serif;
-        }
-
-        /* Reset básico para limpar as margens padrões */
-        * {
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f4f6f8;
+            color: #333;
         }
 
-        body {
-            background-color: var(--cor-fundo);
-            color: var(--cor-principal);
-            font-family: var(--fonte-textos);
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        /* Estilização do Cabeçalho (Header) */
-        .cabecalho {
+        header {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            padding: 2rem 1rem;
             text-align: center;
-            margin-bottom: 40px;
-            padding: 20px 0;
-            border-bottom: 2px solid var(--cor-fundo-cartao);
         }
 
-        .cabecalho__titulo {
-            font-family: var(--fonte-titulos);
-            font-size: 2.5rem;
-            color: var(--cor-destaque);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
         }
 
-        .cabecalho__subtitulo {
+        header p {
+            margin: 0;
             font-size: 1.1rem;
-            color: var(--cor-subtitulo);
-            margin-top: 10px;
+            opacity: 0.9;
         }
 
-        /* Layout do Conteúdo Principal usando Flexbox */
-        .conteudo-principal {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 25px; 
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
 
-        /* Estilização dos blocos de conteúdo (Sections) */
-        .conteudo-principal__secao {
-            background-color: var(--cor-fundo-cartao);
-            padding: 25px;
+        .post {
+            background-color: #ffffff;
             border-radius: 8px;
-            border-left: 5px solid var(--cor-destaque); 
-            transition: transform 0.3s ease; 
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
-        /* Efeito de hover ao passar o mouse */
-        .conteudo-principal__secao:hover {
-            transform: translateY(-5px);
+        .post h2 {
+            color: #1e3a8a;
+            margin-top: 0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
         }
 
-        .secao__titulo {
-            font-family: var(--fonte-titulos);
-            font-size: 1.5rem;
-            color: var(--cor-principal);
-            margin-bottom: 12px;
-        }
-
-        .secao__texto {
-            font-size: 1rem;
-            color: var(--cor-principal);
+        .post p {
             text-align: justify;
+            margin-bottom: 1rem;
         }
 
-        /* Destaca as palavras com a tag <strong> */
-        .secao__texto strong {
-            color: var(--cor-destaque);
-        }
-
-        /* Estilização do Rodapé (Footer) */
-        .rodape {
+        footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            border-top: 1px solid var(--cor-fundo-cartao);
-        }
-
-        .rodape__texto {
+            padding: 1.5rem;
+            background-color: #0f172a;
+            color: #ffffff;
             font-size: 0.9rem;
-            color: var(--cor-subtitulo);
         }
     </style>
 </head>
 <body>
 
-    <header class="cabecalho">
-        <h1 class="cabecalho__titulo">As Cinzas da Europa</h1>
-        <p class="cabecalho__subtitulo">Os acontecimentos da Segunda Guerra Mundial</p>
+    <header>
+        <h1>Meu blog tech</h1>
+        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
     </header>
 
-    <main class="conteudo-principal">
-        
-        <section class="conteudo-principal__secao">
-            <h2 class="secao__titulo">O Início do Conflito</h2>
-            <p class="secao__texto">
-                A Segunda Guerra Mundial (1939–1945) foi o maior conflito armado da história da humanidade. Suas raízes estão ligadas ao desfecho da Primeira Guerra Mundial e à ascensão de regimes totalitários na Europa. O estopim ocorreu em 1º de setembro de 1939, quando a Alemanha invadiu a Polônia, forçando o Reino Unido e a França a declararem guerra.
-            </p>
-        </section>
+    <main>
+        <article class="post">
+            <h2>1. Conscientização</h2>
+            <p>Conscientizar-se sobre o consumo sustentável requer compreender que cada produto implica de uma pegada hídrica invisível, e cabe ao consumidor pesquisar as práticas das empresas e escolher marcas que adotem reutilização da água ou tecnologia de menos impacto. Ao buscar certificações ambientais e valorizar uma indústria transparente, transformamos a compra em uma alavanca do mercado, obrigando as corporações a adotar a responsabilidade ecológica como norma. Desta forma, escolher marcas que economizam e tratam a água torna-se não uma preferência em consumo, mas o compromisso diário necessário para a preservação dos recursos naturais do planeta.</p>
+        </article>
 
-        <section class="conteudo-principal__secao">
-            <h2 class="secao__titulo">As Forças em Confronto</h2>
-            <p class="secao__texto">
-                O mundo se dividiu em dois grandes blocos militares: os <strong>Aliados</strong> (liderados principalmente por Reino Unido, União Soviética e Estados Unidos) e o <strong>Eixo</strong> (composto por Alemanha, Itália e Japão).
-            </p>
-        </section>
+        <article class="post">
+            <h2>2. Impactos</h2>
+            <p>O uso da água produz impactos ambientais profundos, desde a sua captação na natureza até o descarte pós-uso. Ao retirar água de rios, lagos e aquíferos subterrâneos a uma velocidade maior do que o ritmo de recarga natural, levamos à estiagem dos corpos d'água e à perda da biodiversidade da água doce. Este processo de captação, purificação e transporte até as cidades e indústrias requer uma quantidade colossal de energia elétrica, o que gerou uma alta pegada de carbono e acelerou os efeitos do aquecimento global, por conta da queima de combustíveis fósseis na matriz energética mundial. Por fim, o ciclo se fecha com um sério problema de poluição: cerca de 80% da água utilizada retorna ao meio ambiente sob a forma de esgoto. Sem tratamento, esses efluentes poluem os solos, poluem os lençóis freáticos e causam a eutrofização dos rios — quando o excesso de nutrientes sufoca e mata os ecossistemas aquáticos. Logo, o consumo excessivo causa a exaustão do recurso e ainda mais destrói habitats e polui o planeta.</p>
+        </article>
 
-        <section class="conteudo-principal__secao">
-            <h2 class="secao__titulo">O Desfecho e as Consequências</h2>
-            <p class="secao__texto">
-                Após anos de batalhas intensas na Europa, no Pacífico e no Norte da África, a guerra chegou ao fim em 1945. O conflito deixou marcas profundas, resultando na criação da ONU (Organização das Nações Unidas) e redesenhando o mapa geopolítico mundial.
-            </p>
-        </section>
-
-        <section class="conteudo-principal__secao">
-            <h2 class="secao__titulo">O Desfecho e as Consequências</h2>
-            <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/E0A1/production/_115550575_gettyimages-497496268.jpg" width="600" height="400">
-            <p class="secao__texto">
-            <p class="secao__texto">
-                Após anos de batalhas intensas na Europa, no Pacífico e no Norte da África, a guerra chegou ao fim em 1945. O conflito deixou marcas profundas, resultando na criação da ONU (Organização das Nações Unidas) e redesenhando o mapa geopolítico mundial.
-            </p>
-        </section>
-        
+        <article class="post">
+            <h2>3. Poluição</h2>
+            <p>O processo de poluição ocorre quando substâncias químicas, físicas ou biológicas são descartadas nos corpos d'água sem o devido tratamento, alterando suas propriedades naturais. Essa poluição pode ocorrer de forma pontual, como no lançamento direto de esgoto doméstico ou efluentes industriais em rios, ou de forma difusa, quando a chuva carrega agrotóxicos, fertilizantes agrícolas e lixo urbano para o lençol freático e para os rios. Um dos impactos mais severos desse processo é a eutrofização, na qual o excesso de nutrientes vindos do esgoto ou da agricultura provoca a multiplicação descontrolada de algas, impedindo a passagem de luz e consumindo o oxigênio dissolvido na água, o que leva à morte da vida aquática.</p>
+            <p>Nesse contexto, o equilíbrio químico da água é medido pelo pH, cuja faixa ideal para o consumo humano e a vida aquática fica entre 6,5 e 8,5. Contudo, fatores como a chuva ácida e o descarte irregular de efluentes industriais alteram esses níveis: um pH muito baixo torna a água corrosiva e capaz de dissolver metais pesados nocivos, enquanto um pH muito alto prejudica o processo de tratamento público. Assim, a conscientização sobre o nosso consumo total de água é inseparável do combate à poluição e da preservação do equilíbrio das fontes hídricas.</p>
+        </article>
     </main>
 
-    <footer class="rodape">
-        <p class="rodape__texto">Desenvolvido por Arthur Jesus, Arthur Ribeiro e Rafael Spejorim • Projeto de Educação Digital</p>
+    <footer>
+        <p>Projeto IFA &copy; Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
