@@ -154,11 +154,38 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
-        .stats-intro {
-            text-align: center;
-            color: #64748b;
-            font-size: 0.95rem;
+        /* Bloco Introdutório da Seção de Estatísticas */
+        .stats-intro-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1.2rem 1.5rem;
+            border-radius: 0 8px 8px 0;
             margin-bottom: 2rem;
+        }
+
+        .stats-intro-box h3 {
+            margin: 0 0 0.5rem 0;
+            color: #1e3a8a;
+            font-size: 1.15rem;
+        }
+
+        .stats-intro-box p {
+            margin: 0 0 0.8rem 0;
+            color: #334155;
+            font-size: 0.98rem;
+            text-align: justify;
+        }
+
+        /* Caixa de explicação sobre Metro Cúbico */
+        .unit-explanation {
+            display: inline-block;
+            background-color: #dbeafe;
+            color: #1e40af;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: 1px solid #bfdbfe;
         }
 
         .stats-grid {
@@ -200,7 +227,7 @@
         .stat-card .percentage {
             font-size: 2.5rem;
             font-weight: 800;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.1rem;
         }
 
         .stat-card.agri .percentage { color: #16a34a; }
@@ -208,10 +235,14 @@
         .stat-card.ind .percentage { color: #475569; }
 
         .stat-card .volume {
-            font-size: 0.85rem;
-            color: #64748b;
-            font-weight: 600;
+            font-size: 0.9rem;
+            color: #1e293b;
+            font-weight: 700;
             margin-bottom: 1rem;
+            background-color: #e2e8f0;
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
         }
 
         /* Barra de progresso visual */
@@ -242,13 +273,22 @@
         /* Tabela Detalhada (Fluxo m³/s) */
         .stats-table-wrapper {
             overflow-x: auto;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
+            border-top: 1px dashed #cbd5e1;
+            padding-top: 1.5rem;
         }
 
         .stats-table-wrapper h3 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: #1e3a8a;
-            margin-bottom: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .stats-table-wrapper .table-subtitle {
+            font-size: 0.88rem;
+            color: #64748b;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
         }
 
         .data-table {
@@ -259,7 +299,7 @@
         }
 
         .data-table th, .data-table td {
-            padding: 10px 14px;
+            padding: 12px 14px;
             border-bottom: 1px solid #e2e8f0;
         }
 
@@ -385,100 +425,114 @@
             <p>Nesse contexto, o equilíbrio químico da água é medido pelo pH, cuja faixa ideal para o consumo humano e a vida aquática fica entre 6,5 e 8,5. Contudo, fatores como a chuva ácida e o descarte irregular de efluentes industriais alteram esses níveis: um pH muito baixo torna a água corrosiva e capaz de dissolver metais pesados nocivos, enquanto um pH muito alto prejudica o processo de tratamento público. Assim, a conscientização sobre o nosso consumo total de água é inseparável do combate à poluição e da preservação do equilíbrio das fontes hídricas.</p>
         </article>
 
-        <!-- SEÇÃO DE ESTATÍSTICAS ADICIONADA -->
+        <!-- SEÇÃO DE ESTATÍSTICAS COM INTRODUÇÃO E UNIDADE DESTACADA -->
         <div class="section-divider">
             <span>Estatísticas de Consumo</span>
         </div>
 
         <section class="stats-container">
-            <p class="stats-intro">Dados oficiais sobre quem realmente consome os recursos hídricos no Brasil e no mundo (Fonte: Agência Nacional de Águas - ANA / Conjuntura dos Recursos Hídricos).</p>
             
+            <!-- Contextualização para o leitor -->
+            <div class="stats-intro-box">
+                <h3>Para Onde Vai a Água do Brasil?</h3>
+                <p>
+                    Para entender o real impacto do uso dos recursos hídricos, é essencial olhar para os números oficiais levantados pela <strong>Agência Nacional de Águas e Saneamento Básico (ANA)</strong>. Muitas vezes acreditamos que o maior consumo está nas tarefas residenciais do dia a dia, mas os dados revelam uma realidade bem diferente: a maior parte da água captada no país é destinada à produção agrícola e industrial.
+                </p>
+                <div class="unit-explanation">
+                    💡 <strong>O que é m³ (Metro Cúbico)?</strong> 1 metro cúbico (m³) de água equivale a exatamente <strong>1.000 litros</strong> (o tamanho médio de uma caixa d'água residencial).
+                </div>
+            </div>
+
+            <!-- Cards com Porcentagens e Metros Cúbicos -->
             <div class="stats-grid">
                 <!-- Card Agricultura -->
                 <div class="stat-card agri">
                     <h3>Agricultura & Pecuária</h3>
                     <div class="percentage">82,8%</div>
-                    <div class="volume">(961 m³)</div>
+                    <div class="volume">961 m³ de água</div>
                     <div class="progress-bar-bg">
                         <div class="progress-bar-fill"></div>
                     </div>
-                    <p>Corresponde à imensa maioria do volume de consumo, concentrado na irrigação das lavouras e dessedentação animal.</p>
+                    <p>Representa a imensa maioria do volume total. A irrigação de lavouras e a dessedentação de animais são os principais focos.</p>
                 </div>
 
                 <!-- Card Uso Urbano -->
                 <div class="stat-card urban">
                     <h3>Abastecimento Humano</h3>
                     <div class="percentage">10,6%</div>
-                    <div class="volume">(122 m³)</div>
+                    <div class="volume">122 m³ de água</div>
                     <div class="progress-bar-bg">
                         <div class="progress-bar-fill"></div>
                     </div>
-                    <p>Atende à população em ambiente urbano e rural para consumo doméstico e abastecimento público.</p>
+                    <p>Soma o abastecimento público residencial em áreas urbanas e rurais para consumo direto e higiene.</p>
                 </div>
 
                 <!-- Card Indústria -->
                 <div class="stat-card ind">
                     <h3>Indústria</h3>
                     <div class="percentage">6,7%</div>
-                    <div class="volume">(78 m³)</div>
+                    <div class="volume">78 m³ de água</div>
                     <div class="progress-bar-bg">
                         <div class="progress-bar-fill"></div>
                     </div>
-                    <p>Utilizado nos processos industriais de fabricação, resfriamento de máquinas e limpeza operacional.</p>
+                    <p>Utilizada no processamento industrial, resfriamento de maquinário pesado e limpeza de instalações.</p>
                 </div>
             </div>
 
+            <!-- Tabela Detalhada com Vazão em m³/s -->
             <div class="stats-table-wrapper">
-                <h3>Balanço Hídrico por Setor (em m³/segundo)</h3>
+                <h3>Balanço Hídrico por Setor no Brasil</h3>
+                <p class="table-subtitle">Valores medidos em <strong>metros cúbicos de água por segundo (m³/s)</strong> — onde 1 m³/s = 1.000 litros fluindo a cada segundo.</p>
+                
                 <table class="data-table">
                     <thead>
                         <tr>
                             <th>Setor / Atividade</th>
-                            <th>Quanto Capta</th>
-                            <th>Quanto Gasta</th>
-                            <th>Quanto Devolve</th>
+                            <th>Quanto Capta (m³/s)</th>
+                            <th>Quanto Gasta (m³/s)</th>
+                            <th>Quanto Devolve (m³/s)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><span class="tag tag-agri">Agronegócio</span> Irrigação</td>
-                            <td>1.084 m³/s</td>
+                            <td><strong>1.084 m³/s</strong></td>
                             <td>792 m³/s</td>
                             <td>292 m³/s</td>
                         </tr>
                         <tr>
                             <td><span class="tag tag-agri">Agronegócio</span> Uso Animal</td>
-                            <td>167 m³/s</td>
+                            <td><strong>167 m³/s</strong></td>
                             <td>125 m³/s</td>
                             <td>42 m³/s</td>
                         </tr>
                         <tr>
                             <td><span class="tag tag-urban">Uso Urbano</span></td>
-                            <td>496 m³/s</td>
+                            <td><strong>496 m³/s</strong></td>
                             <td>99 m³/s</td>
                             <td>397 m³/s</td>
                         </tr>
                         <tr>
                             <td><span class="tag tag-ind">Indústria</span></td>
-                            <td>189 m³/s</td>
+                            <td><strong>189 m³/s</strong></td>
                             <td>102 m³/s</td>
                             <td>87 m³/s</td>
                         </tr>
                         <tr>
                             <td><span class="tag tag-ind">Termelétrica</span></td>
-                            <td>80 m³/s</td>
+                            <td><strong>80 m³/s</strong></td>
                             <td>3 m³/s</td>
                             <td>77 m³/s</td>
                         </tr>
                         <tr>
                             <td><span class="tag tag-agri">Uso Rural</span></td>
-                            <td>35 m³/s</td>
+                            <td><strong>35 m³/s</strong></td>
                             <td>28 m³/s</td>
                             <td>7 m³/s</td>
                         </tr>
                         <tr>
                             <td><span class="tag tag-ind">Mineração</span></td>
-                            <td>33 m³/s</td>
+                            <td><strong>33 m³/s</strong></td>
                             <td>10 m³/s</td>
                             <td>23 m³/s</td>
                         </tr>
