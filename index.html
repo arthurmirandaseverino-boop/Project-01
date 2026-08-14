@@ -93,7 +93,7 @@
             text-align: justify;
         }
 
-        /* Divisor para a seção dos 3 tópicos principais */
+        /* Divisor de seção */
         .section-divider {
             display: flex;
             align-items: center;
@@ -144,6 +144,150 @@
         .post p:last-child {
             margin-bottom: 0;
         }
+
+        /* --- SEÇÃO DE ESTATÍSTICAS DO CONSUMO DE ÁGUA --- */
+        .stats-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .stats-intro {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+
+        .stat-card.agri::before { background-color: #16a34a; }
+        .stat-card.urban::before { background-color: #0284c7; }
+        .stat-card.ind::before { background-color: #64748b; }
+
+        .stat-card h3 {
+            font-size: 1.1rem;
+            margin: 0 0 10px 0;
+            color: #1e293b;
+        }
+
+        .stat-card .percentage {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-card.agri .percentage { color: #16a34a; }
+        .stat-card.urban .percentage { color: #0284c7; }
+        .stat-card.ind .percentage { color: #475569; }
+
+        .stat-card .volume {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Barra de progresso visual */
+        .progress-bar-bg {
+            background-color: #e2e8f0;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 0.8rem;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .stat-card.agri .progress-bar-fill { background-color: #16a34a; width: 82.8%; }
+        .stat-card.urban .progress-bar-fill { background-color: #0284c7; width: 10.6%; }
+        .stat-card.ind .progress-bar-fill { background-color: #64748b; width: 6.7%; }
+
+        .stat-card p {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Tabela Detalhada (Fluxo m³/s) */
+        .stats-table-wrapper {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+        }
+
+        .stats-table-wrapper h3 {
+            font-size: 1.1rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .data-table th, .data-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .data-table th {
+            background-color: #f1f5f9;
+            color: #334155;
+            font-weight: 700;
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .data-table tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .tag-agri { background-color: #dcfce7; color: #15803d; }
+        .tag-ind { background-color: #f1f5f9; color: #475569; }
+        .tag-urban { background-color: #e0f2fe; color: #0369a1; }
 
         footer {
             background-color: #0f172a;
@@ -240,6 +384,109 @@
             <p>O processo de poluição ocorre quando substâncias químicas, físicas ou biológicas são descartadas nos corpos d'água sem o devido tratamento, alterando suas propriedades naturais. Essa poluição pode ocorrer de forma pontual, como no lançamento direto de esgoto doméstico ou efluentes industriais em rios, ou de forma difusa, quando a chuva carrega agrotóxicos, fertilizantes agrícolas e lixo urbano para o lençol freático e para os rios. Um dos impactos mais severos desse processo é a eutrofização, na qual o excesso de nutrientes vindos do esgoto ou da agricultura provoca a multiplicação descontrolada de algas, impedindo a passagem de luz e consumindo o oxigênio dissolvido na água, o que leva à morte da vida aquática.</p>
             <p>Nesse contexto, o equilíbrio químico da água é medido pelo pH, cuja faixa ideal para o consumo humano e a vida aquática fica entre 6,5 e 8,5. Contudo, fatores como a chuva ácida e o descarte irregular de efluentes industriais alteram esses níveis: um pH muito baixo torna a água corrosiva e capaz de dissolver metais pesados nocivos, enquanto um pH muito alto prejudica o processo de tratamento público. Assim, a conscientização sobre o nosso consumo total de água é inseparável do combate à poluição e da preservação do equilíbrio das fontes hídricas.</p>
         </article>
+
+        <!-- SEÇÃO DE ESTATÍSTICAS ADICIONADA -->
+        <div class="section-divider">
+            <span>Estatísticas de Consumo</span>
+        </div>
+
+        <section class="stats-container">
+            <p class="stats-intro">Dados oficiais sobre quem realmente consome os recursos hídricos no Brasil e no mundo (Fonte: Agência Nacional de Águas - ANA / Conjuntura dos Recursos Hídricos).</p>
+            
+            <div class="stats-grid">
+                <!-- Card Agricultura -->
+                <div class="stat-card agri">
+                    <h3>Agricultura & Pecuária</h3>
+                    <div class="percentage">82,8%</div>
+                    <div class="volume">(961 m³)</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <p>Corresponde à imensa maioria do volume de consumo, concentrado na irrigação das lavouras e dessedentação animal.</p>
+                </div>
+
+                <!-- Card Uso Urbano -->
+                <div class="stat-card urban">
+                    <h3>Abastecimento Humano</h3>
+                    <div class="percentage">10,6%</div>
+                    <div class="volume">(122 m³)</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <p>Atende à população em ambiente urbano e rural para consumo doméstico e abastecimento público.</p>
+                </div>
+
+                <!-- Card Indústria -->
+                <div class="stat-card ind">
+                    <h3>Indústria</h3>
+                    <div class="percentage">6,7%</div>
+                    <div class="volume">(78 m³)</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <p>Utilizado nos processos industriais de fabricação, resfriamento de máquinas e limpeza operacional.</p>
+                </div>
+            </div>
+
+            <div class="stats-table-wrapper">
+                <h3>Balanço Hídrico por Setor (em m³/segundo)</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Setor / Atividade</th>
+                            <th>Quanto Capta</th>
+                            <th>Quanto Gasta</th>
+                            <th>Quanto Devolve</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="tag tag-agri">Agronegócio</span> Irrigação</td>
+                            <td>1.084 m³/s</td>
+                            <td>792 m³/s</td>
+                            <td>292 m³/s</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag tag-agri">Agronegócio</span> Uso Animal</td>
+                            <td>167 m³/s</td>
+                            <td>125 m³/s</td>
+                            <td>42 m³/s</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag tag-urban">Uso Urbano</span></td>
+                            <td>496 m³/s</td>
+                            <td>99 m³/s</td>
+                            <td>397 m³/s</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag tag-ind">Indústria</span></td>
+                            <td>189 m³/s</td>
+                            <td>102 m³/s</td>
+                            <td>87 m³/s</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag tag-ind">Termelétrica</span></td>
+                            <td>80 m³/s</td>
+                            <td>3 m³/s</td>
+                            <td>77 m³/s</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag tag-agri">Uso Rural</span></td>
+                            <td>35 m³/s</td>
+                            <td>28 m³/s</td>
+                            <td>7 m³/s</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag tag-ind">Mineração</span></td>
+                            <td>33 m³/s</td>
+                            <td>10 m³/s</td>
+                            <td>23 m³/s</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
     </main>
 
     <footer>
